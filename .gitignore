@@ -1,0 +1,16 @@
+# Entorno virtual
+.venv/
+__pycache__/
+*.pyc
+
+# Datos grandes
+data/raw/
+data/processed/
+data/checkpoints/
+data/staging/detecciones/etl_checkpoints/
+metastore_db/
+derby.log
+
+# Cosas de VSCode / pytest
+.vscode/
+.pytest_cache/
