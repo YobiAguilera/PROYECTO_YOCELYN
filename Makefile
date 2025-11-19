@@ -36,3 +36,7 @@ etl:
 
 hive-tables:
 	beeline -u "jdbc:hive2://localhost:10000/default" -n yocelyn -f scripts_hive/create_tables.sql
+
+hive-queries:
+	beeline -u "jdbc:hive2://localhost:10000/default" -n yocelyn -f scripts_hive/consultas_analiticas.sql
+

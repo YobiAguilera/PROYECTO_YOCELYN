@@ -142,7 +142,7 @@ def limpiar_df(df: pd.DataFrame) -> pd.DataFrame:
 def subir_a_hdfs(local_path: str, hdfs_dir: str) -> None:
     """
     Copia un CSV local a HDFS usando 'hdfs dfs -put -f'.
-    No hace LOAD DATA porque la tabla es EXTERNAL: al estar el archivo en LOCATION,
+    No hace LOAD DATA porque la tabla es EXTERNAL, al estar el archivo en LOCATION,
     Hive lo ve automáticamente.
     """
     print(f"[INFO] Subiendo a HDFS: {local_path} -> {hdfs_dir}")
@@ -208,7 +208,7 @@ def main() -> None:
 
     todos_csv = listar_csv_staging()
     if not todos_csv:
-        print("[INFO] No hay CSV en data/staging/detecciones, nada que hacer.")
+        print("[INFO] No hay CSV en data/staging/detecciones.")
         return
 
     procesados = leer_checkpoint()
